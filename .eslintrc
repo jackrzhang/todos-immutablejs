@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "ecmaFeatures": {
+    "generators": true,
+    "restParams": true,
+    "spread": true
+  },
+  "rules": {
+    "no-console": 0,
+    "comma-dangle": 0,
+    "react/prefer-stateless-function": 0
+  }
+}
