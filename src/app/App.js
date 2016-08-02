@@ -8,8 +8,7 @@ class App extends Component {
     return (
       <div>
         <h1 className={styles.title}>todos</h1>
-        Asdfasdfasd
-      </div>
+      </div>       
     );
   }
 }
