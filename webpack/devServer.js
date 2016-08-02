@@ -11,9 +11,13 @@ const compiler = webpack(configDev);
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: configDev.output.publicPath,
-  noInfo: true,
   stats: {
-    colors: true
+    colors: true,
+    hash: false,
+    timings: true,
+    chunks: false,
+    chunkModules: false,
+    modules: false
   }
 }));
 

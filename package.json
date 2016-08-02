@@ -1,9 +1,8 @@
 {
-  "name": "react-webpack-boilerplate",
-  "description": "Simple boilerplate for a modern JS developer experience.",
+  "name": "todos-immutablejs",
+  "description": "Todo List, with Redux and Immutable.js.",
   "version": "1.0.0",
   "author": "Jack R. Zhang <15jzhang@gmail.com>",
-  "keywords": [],
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -43,7 +42,6 @@
     "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
-    "babel-polyfill": "^6.9.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
   }

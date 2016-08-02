@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-        <h1 className={styles.title}>React Webpack Boilerplate</h1>
+        <h1 className={styles.title}>todos</h1>
       </div>
     );
   }
