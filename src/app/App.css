@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Raleway';
-  src: inline('./assets/Raleway-Thin.ttf');
+  src: inline('./../assets/Raleway-Thin.ttf');
   font-weight: 100;
 }
 
