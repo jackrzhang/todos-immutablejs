@@ -1,9 +1,10 @@
+/* eslint-disable global-require */
+const webpack = require('webpack');
 const { BUILD_DIR, SRC_DIR } = require('./constants');
 
 const config = {
   name: 'production',
   entry: [
-    'babel-polyfill',
     `${SRC_DIR}index.js`
   ],
   output: {
@@ -23,6 +24,18 @@ const config = {
       }
     ]
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+  ],
+  postcss: webpackArg => [
+    require('postcss-import')({ addDependencyTo: webpackArg }),
+    require('postcss-url'),
+    require('postcss-assets'),
+    require('precss'),
+    require('postcss-cssnext')
+  ],
   devtool: 'source-map'
 };
 

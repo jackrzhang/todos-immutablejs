@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "node webpack/devServer.js",
+    "start": "NODE_ENV=development node webpack/dev-server.js",
     "clean": "rm build/bundle.*",
     "build": "NODE_ENV=production webpack --config webpack/config.prod.js",
     "prod": "npm run build && open build/index.html",
@@ -36,12 +36,16 @@
     "postcss-url": "^5.1.2",
     "precss": "^1.4.0",
     "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
+    "normalize.css": "^4.2.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-redux": "^4.4.5",

@@ -32,9 +32,12 @@ const config = {
     // Webpack 2.0 fixed this mispelling
     // new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
   ],
-  postcss: (webpackArg) => [
+  postcss: webpackArg => [
     require('postcss-import')({ addDependencyTo: webpackArg }),
     require('postcss-url'),
     require('postcss-assets'),

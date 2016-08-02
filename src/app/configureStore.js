@@ -1,12 +1,36 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from './rootReducer';
 
-export default function configureStore(initialState) {
+import { persistState } from 'redux-devtools';
+import DevTools from './DevTools';
+
+const getDebugSessionKey = () => {
+  const matches = window.location.href.match(/[?&]debug_session=([^&#]+)\b/);
+  return (matches && matches.length > 0) ? matches[1] : null;
+};
+
+let enhancer;
+if (process.env.NODE_ENV === 'development') {
+  enhancer = compose(
+    applyMiddleware(),
+    DevTools.instrument({
+      maxAge: 50,
+      shouldCatchErrors: true
+    }),
+    persistState(getDebugSessionKey())
+  );
+} else {
+  enhancer = applyMiddleware();
+}
+
+const configureStore = initialState => {
   const store = createStore(
     rootReducer,
     initialState,
-    applyMiddleware()
+    enhancer
   );
 
   return store;
-}
+};
+
+export default configureStore;
