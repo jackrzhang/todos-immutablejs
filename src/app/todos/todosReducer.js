@@ -1,33 +1,40 @@
+import { ADD_TODO } from './../input/inputActions.js';
+
 const initialTodos = [
   {
     id: 0,
     text: 'Learn React',
     complete: false
-  },
-  {
+  }, {
     id: 1,
     text: 'Learn Redux',
     complete: false
-  },
-  {
+  }, {
     id: 2,
-    text: "Use Webpack's Hot Module Reloading",
+    text: "Utilize Webpack's Hot Module Reloading",
     complete: false
-  },
-  {
+  }, {
     id: 3,
-    text: 'Use Redux DevTools',
+    text: 'Set up Redux DevTools',
     complete: false
-  },
-  {
+  }, {
     id: 4,
-    text: 'Use immutable data :)',
+    text: 'Optimize with Immutable.js :)',
     complete: false
   }
 ];
 
 const todosReducer = (state = initialTodos, action) => {
   switch (action.type) {
+    case ADD_TODO:
+      return [
+        {
+          id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
+          text: action.text,
+          complete: false
+        },
+        ...state
+      ];
     default:
       return state;
   }
