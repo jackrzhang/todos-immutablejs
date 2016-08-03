@@ -34,8 +34,9 @@ a {
 }
 
 .credit {
-  color: rgb(170, 170, 170);
+  color: rgb(210, 210, 210);
   position: fixed;
+  letter-spacing: .5px;
   bottom: 2vh;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -47,7 +48,7 @@ a {
 }
 
 .credit a {
-  color: rgb(170, 170, 170);
+  color: rgb(210, 210, 210);
 }
 
 .credit a:hover {

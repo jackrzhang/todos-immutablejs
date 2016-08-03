@@ -10,13 +10,20 @@ div.input {
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-span.icon {
+span.caret {
   line-height: var(--element-height);
   display: block;
   float: left;
   height: 40px;
   margin: 7px 0 6px 3px;
   content: inline('./../../assets/caret.png');
+}
+
+span.spacer {
+  height: var(--element-height);
+  display: block;
+  float: left;
+  width: 43px;
 }
 
 input.text {

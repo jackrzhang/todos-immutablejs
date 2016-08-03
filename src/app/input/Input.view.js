@@ -22,9 +22,13 @@ class Input extends Component {
   }
 
   render() {
+    const { canShowCaret } = this.props;
     return (
       <div className={styles.input}>
-        <span className={styles.icon} />
+        {canShowCaret ?
+          <span className={styles.caret} /> :
+          <span className={styles.spacer} />
+        }
         <input
           className={styles.text}
           type="text"
@@ -39,6 +43,7 @@ class Input extends Component {
 }
 
 Input.propTypes = {
+  canShowCaret: PropTypes.bool.isRequired,
   addTodo: PropTypes.func.isRequired
 };
 

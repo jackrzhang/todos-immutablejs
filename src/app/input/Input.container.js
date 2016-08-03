@@ -3,6 +3,10 @@ import Input from './Input.view';
 
 import { addTodo } from './inputActions';
 
+const mapStateToProps = state => ({
+  canShowCaret: state.todos.length !== 0
+});
+
 const mapDispatchToProps = dispatch => ({
   addTodo: text => {
     dispatch(addTodo(text));
@@ -10,6 +14,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  () => ({}),
+  mapStateToProps,
   mapDispatchToProps
 )(Input);
