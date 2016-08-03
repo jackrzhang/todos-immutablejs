@@ -3,7 +3,7 @@ import Todo from './Todo';
 
 class Todos extends Component {
   render() {
-    const { todos } = this.props;
+    const { todos, completeTodo } = this.props;
     return (
       <div>
         {todos.map(todo => (
@@ -12,6 +12,7 @@ class Todos extends Component {
             id={todo.id}
             text={todo.text}
             complete={todo.complete}
+            completeTodo={completeTodo}
           />
         ))}
       </div>
@@ -20,7 +21,8 @@ class Todos extends Component {
 }
 
 Todos.propTypes = {
-  todos: PropTypes.array.isRequired
+  todos: PropTypes.array.isRequired,
+  completeTodo: PropTypes.func.isRequired
 };
 
 export default Todos;
