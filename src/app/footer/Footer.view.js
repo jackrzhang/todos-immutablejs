@@ -3,8 +3,9 @@ import React, { PropTypes, Component } from 'react';
 class Footer extends Component {
   render() {
     const {
-      numIncomplete,
+      showFooter,
       canClearCompleted,
+      numIncomplete,
       clearCompleted,
       showAll,
       showActive,
@@ -13,7 +14,7 @@ class Footer extends Component {
 
     const numIncompleteText = numIncomplete === 1 ? 'item left' : 'items left';
 
-    return (
+    return showFooter ?
       <div>
         <span>{`${numIncomplete.toString()} ${numIncompleteText}`}</span>
 
@@ -31,12 +32,13 @@ class Footer extends Component {
           </span> :
           null
         }
-      </div>
-    );
+      </div> :
+      null;
   }
 }
 
 Footer.propTypes = {
+  showFooter: PropTypes.bool.isRequired,
   canClearCompleted: PropTypes.bool.isRequired,
   numIncomplete: PropTypes.number.isRequired,
   clearCompleted: PropTypes.func.isRequired,
