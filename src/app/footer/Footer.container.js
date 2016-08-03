@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
-import { clearCompleted } from './footerActions';
+import { clearCompleted, applyFilter } from './footerActions';
+import { ALL, ACTIVE, COMPLETED } from './filterTypes';
+
 import Footer from './Footer.view';
 
 const mapStateToProps = state => ({
@@ -10,6 +12,15 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   clearCompleted: () => {
     dispatch(clearCompleted());
+  },
+  showAll: () => {
+    dispatch(applyFilter(ALL));
+  },
+  showActive: () => {
+    dispatch(applyFilter(ACTIVE));
+  },
+  showCompleted: () => {
+    dispatch(applyFilter(COMPLETED));
   }
 });
 
