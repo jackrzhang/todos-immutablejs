@@ -19,6 +19,10 @@ a {
   color: rgb(25, 25, 25);
 }
 
+a:hover {
+  color: rgb(70, 70, 70);
+}
+
 .title {
   color: rgb(234, 215, 215);
   text-align: center;

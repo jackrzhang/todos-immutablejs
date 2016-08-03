@@ -30,6 +30,13 @@ const configureStore = initialState => {
     enhancer
   );
 
+  if (module.hot) {
+    module.hot.accept(() => {
+      const nextRootReducer = require('./rootReducer').default; // eslint-disable-line
+      store.replaceReducer(nextRootReducer);
+    });
+  }
+
   return store;
 };
 
