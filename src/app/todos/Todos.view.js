@@ -9,6 +9,7 @@ class Todos extends Component {
         {todos.map(todo => (
           <Todo
             key={todo.id}
+            id={todo.id}
             text={todo.text}
             complete={todo.complete}
           />
@@ -22,12 +23,4 @@ Todos.propTypes = {
   todos: PropTypes.array.isRequired
 };
 
-import { connect } from 'react-redux';
-
-const mapStateToProps = state => ({
-  todos: state.todos
-});
-
-export default connect(
-  mapStateToProps
-)(Todos);
+export default Todos;

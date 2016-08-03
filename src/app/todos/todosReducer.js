@@ -3,6 +3,26 @@ const initialTodos = [
     id: 0,
     text: 'Learn React',
     complete: false
+  },
+  {
+    id: 1,
+    text: 'Learn Redux',
+    complete: false
+  },
+  {
+    id: 2,
+    text: "Use Webpack's Hot Module Reloading",
+    complete: false
+  },
+  {
+    id: 3,
+    text: 'Use Redux DevTools',
+    complete: false
+  },
+  {
+    id: 4,
+    text: 'Use immutable data :)',
+    complete: false
   }
 ];
 
@@ -43,3 +63,4 @@ export default todosReducer;
 // };
 
 // export default friendsListReducer;
+

@@ -10,7 +10,7 @@ const Todo = props => {
 };
 
 Todo.propTypes = {
-  key: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
   complete: PropTypes.bool.isRequired
 };

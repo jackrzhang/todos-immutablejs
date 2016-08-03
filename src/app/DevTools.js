@@ -9,8 +9,8 @@ const DevTools = createDevTools(
   <DockMonitor
     toggleVisibilityKey="ctrl-d"
     changePositionKey="ctrl-r"
-    defaultPosition={'left'}
-    defaultIsVisible={false}
+    defaultPosition={'right'}
+    defaultIsVisible
     expandActionRoot
     expandStateRoot
   >
