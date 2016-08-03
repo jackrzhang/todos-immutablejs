@@ -1,7 +1,7 @@
 const initialTodos = [
   {
     id: 0,
-    text: '',
+    text: 'Learn React',
     complete: false
   }
 ];
@@ -9,7 +9,7 @@ const initialTodos = [
 const todosReducer = (state = initialTodos, action) => {
   switch (action.type) {
     default:
-      return 'temp';
+      return state;
   }
 };
 

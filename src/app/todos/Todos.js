@@ -1,23 +1,33 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
+import Todo from './Todo';
 
-import styles from './Todos.css';
-
-// react-hot-loader prior to version 3 does not
-// support stateless functional root components
 class Todos extends Component {
   render() {
+    const { todos } = this.props;
     return (
       <div>
-        Hey
+        {todos.map(todo => (
+          <Todo
+            key={todo.id}
+            text={todo.text}
+            complete={todo.complete}
+          />
+        ))}
       </div>
     );
   }
 }
 
-export default Todos;
+Todos.propTypes = {
+  todos: PropTypes.array.isRequired
+};
 
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
-// export default connect(
-//   () => ({})
-// )(Todos);
+const mapStateToProps = state => ({
+  todos: state.todos
+});
+
+export default connect(
+  mapStateToProps
+)(Todos);
