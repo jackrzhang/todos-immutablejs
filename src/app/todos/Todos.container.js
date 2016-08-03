@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { completeTodo } from './todoActions';
+import { completeTodo } from './todosActions';
 import Todos from './Todos.view';
 
 const mapStateToProps = state => ({

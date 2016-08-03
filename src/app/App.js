@@ -6,8 +6,6 @@ import styles from './App.css';
 import Input from './input/Input.container';
 import Todos from './todos/Todos.container';
 
-// react-hot-loader prior to version 3 does not
-// support stateless functional root components
 class App extends Component {
   render() {
     return (

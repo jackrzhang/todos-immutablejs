@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react';
 class Todo extends Component {
   constructor(props) {
     super(props);
-    this.removeTodo = this.removeTodo.bind(this);
     this.completeTodo = this.completeTodo.bind(this);
   }
 

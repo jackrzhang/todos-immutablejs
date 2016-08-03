@@ -1,4 +1,5 @@
 import { ADD_TODO } from './../input/inputActions.js';
+import { COMPLETE_TODO } from './../todos/todosActions.js';
 
 const initialTodos = [
   {
@@ -35,6 +36,12 @@ const todosReducer = (state = initialTodos, action) => {
         },
         ...state
       ];
+    case COMPLETE_TODO:
+      return state.map(todo =>
+        todo.id === action.id ?
+          Object.assign({}, todo, { complete: !todo.complete }) :
+          todo
+      );
     default:
       return state;
   }
