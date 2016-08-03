@@ -5,22 +5,18 @@ import { CLEAR_COMPLETED } from './../footer/footerActions';
 const initialTodos = [
   {
     id: 0,
-    text: 'Learn React',
+    text: 'Learn React & Redux',
     complete: false
   }, {
     id: 1,
-    text: 'Learn Redux',
-    complete: false
-  }, {
-    id: 2,
     text: "Utilize Webpack's Hot Module Reloading",
     complete: false
   }, {
-    id: 3,
+    id: 2,
     text: 'Set up Redux DevTools',
     complete: false
   }, {
-    id: 4,
+    id: 3,
     text: 'Optimize with Immutable.js :)',
     complete: false
   }
