@@ -4,14 +4,21 @@ import styles from './Input.css';
 class Input extends Component {
   constructor(props) {
     super(props);
-    this.submitInput = this.submitInput.bind(this);
+    this.state = { text: '' };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  submitInput(event) {
-    const text = event.target.value;
-    if (event.which === 13 && text.trim() !== '') {
+  handleSubmit(e) {
+    const text = e.target.value;
+    if (e.which === 13 && text.trim() !== '') {
       this.props.addTodo(text);
+      this.setState({ text: '' });
     }
+  }
+
+  handleChange(e) {
+    this.setState({ text: e.target.value });
   }
 
   render() {
@@ -20,7 +27,9 @@ class Input extends Component {
         <input
           type="text"
           placeholder="What needs to be done?"
-          onKeyDown={this.submitInput}
+          value={this.state.text}
+          onChange={this.handleChange}
+          onKeyDown={this.handleSubmit}
         />
       </div>
     );
