@@ -4,6 +4,10 @@
   font-weight: 100;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
   height: 100%;
@@ -24,7 +28,7 @@ a {
   color: rgb(234, 215, 215);
   text-align: center;
   font-weight: 100;
-  font-size: 64px;
+  font-size: 80px;
   font-family: 'Raleway', 'Arial';
   margin-bottom: 0;
 }
@@ -51,5 +55,9 @@ a {
 }
 
 .list {
-
+  border-top: 1px solid rgb(244, 244, 244);
+  box-shadow: -5px 30px 85px -1px rgba(170,170,170, .8);
+  margin: 35px auto 0;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
 }

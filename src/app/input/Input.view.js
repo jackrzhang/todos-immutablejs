@@ -24,7 +24,9 @@ class Input extends Component {
   render() {
     return (
       <div className={styles.input}>
+        <span className={styles.icon} />
         <input
+          className={styles.text}
           type="text"
           placeholder="What needs to be done?"
           value={this.state.text}

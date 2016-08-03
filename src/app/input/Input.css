@@ -1,3 +1,37 @@
-.input {
-  
+/* CSS variables */
+div.input {
+  --total-height: 56px;
+  --element-height: 55px;
+}
+
+div.input {
+  margin: 0;
+  height: var(--total-height);
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+span.icon {
+  line-height: var(--element-height);
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 7px 0 6px 3px;
+  content: inline('./../../assets/caret.png');
+}
+
+input.text {
+  display: block;
+  float: left;
+  height: var(--element-height);
+  width: 400px;
+  margin: 0 20px 0 10px;
+  outline: none;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+}
+
+input.text::-webkit-input-placeholder { 
+  font-style: italic; 
+  color: rgb(220, 220, 220);
 }
