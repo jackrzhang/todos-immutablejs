@@ -59,7 +59,7 @@ a {
 .list {
   border-top: 1px solid rgb(244, 244, 244);
   box-shadow: -5px 30px 85px -1px rgba(170,170,170, .8);
-  margin: 35px auto 0;
+  margin: 35px auto 150px;
   width: 500px;
   background-color: rgb(255, 255, 255);
 }

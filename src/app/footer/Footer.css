@@ -7,7 +7,7 @@ div.footer {
 div.footer {
   position: relative;
   height: var(--total-height);
-  color: rgb(140, 140, 140);
+  color: rgb(130, 130, 130);
   font-size: 13px;
 }
 
@@ -29,10 +29,11 @@ span.filter {
   padding: 4px 6px;
   cursor: pointer;
   transition: all .1s;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 span.filter.current {
-  border: 1px solid rgb(243, 224, 224);
+  border-color: rgb(243, 224, 224);
   border-radius: 3.5px;
 }
 
