@@ -10,7 +10,10 @@ class Footer extends Component {
       clearCompleted,
       showAll,
       showActive,
-      showCompleted
+      showCompleted,
+      filterAll,
+      filterActive,
+      filterCompleted
     } = this.props;
 
     const numIncompleteText = numIncomplete === 1 ? 'item left' : 'items left';
@@ -22,9 +25,24 @@ class Footer extends Component {
         </span>
 
         <div className={styles.filters}>
-          <span className={styles.filter} onClick={showAll}>All</span>
-          <span className={styles.filter} onClick={showActive}>Active</span>
-          <span className={styles.filter} onClick={showCompleted}>Completed</span>
+          <span
+            className={showAll ? `${styles.filter} ${styles.current}` : styles.filter}
+            onClick={filterAll}
+          >
+            All
+          </span>
+          <span
+            className={showActive ? `${styles.filter} ${styles.current}` : styles.filter}
+            onClick={filterActive}
+          >
+            Active
+          </span>
+          <span
+            className={showCompleted ? `${styles.filter} ${styles.current}` : styles.filter}
+            onClick={filterCompleted}
+          >
+            Completed
+          </span>
         </div>
 
         {canClearCompleted ?
@@ -46,9 +64,12 @@ Footer.propTypes = {
   numIncomplete: PropTypes.number.isRequired,
   canClearCompleted: PropTypes.bool.isRequired,
   clearCompleted: PropTypes.func.isRequired,
-  showAll: PropTypes.func.isRequired,
-  showActive: PropTypes.func.isRequired,
-  showCompleted: PropTypes.func.isRequired
+  showAll: PropTypes.bool.isRequired,
+  showActive: PropTypes.bool.isRequired,
+  showCompleted: PropTypes.bool.isRequired,
+  filterAll: PropTypes.func.isRequired,
+  filterActive: PropTypes.func.isRequired,
+  filterCompleted: PropTypes.func.isRequired
 };
 
 export default Footer;

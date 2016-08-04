@@ -7,20 +7,23 @@ import Footer from './Footer.view';
 const mapStateToProps = state => ({
   showFooter: state.todos.length !== 0,
   canClearCompleted: state.todos.some(todo => todo.complete),
-  numIncomplete: state.todos.reduce((count, todo) => !todo.complete ? count + 1 : count, 0)
+  numIncomplete: state.todos.reduce((count, todo) => !todo.complete ? count + 1 : count, 0),
+  showAll: state.filter === ALL,
+  showActive: state.filter === ACTIVE,
+  showCompleted: state.filter === COMPLETED
 });
 
 const mapDispatchToProps = dispatch => ({
   clearCompleted: () => {
     dispatch(clearCompleted());
   },
-  showAll: () => {
+  filterAll: () => {
     dispatch(applyFilter(ALL));
   },
-  showActive: () => {
+  filterActive: () => {
     dispatch(applyFilter(ACTIVE));
   },
-  showCompleted: () => {
+  filterCompleted: () => {
     dispatch(applyFilter(COMPLETED));
   }
 });

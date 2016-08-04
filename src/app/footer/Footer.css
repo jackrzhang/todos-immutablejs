@@ -1,7 +1,7 @@
 div.footer {
-  --total-height: 36px;
+  --total-height: 40px;
   --element-height: 22px;
-  --element-margin: 7px;
+  --element-margin: 9px;
 }
 
 div.footer {
@@ -25,13 +25,15 @@ div.filters {
 }
 
 span.filter {
-  margin: 0 7px;
+  margin: 0 3px;
+  padding: 4px 6px;
   cursor: pointer;
   transition: all .1s;
 }
 
 span.filter.current {
-  
+  border: 1px solid rgb(243, 224, 224);
+  border-radius: 3.5px;
 }
 
 span.filter:hover {
