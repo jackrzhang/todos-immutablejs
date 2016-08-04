@@ -1,0 +1,51 @@
+div.footer {
+  --total-height: 36px;
+  --element-height: 22px;
+  --element-margin: 7px;
+}
+
+div.footer {
+  position: relative;
+  height: var(--total-height);
+  color: rgb(140, 140, 140);
+  font-size: 13px;
+}
+
+span.remaining {
+  float: left;
+  line-height: var(--element-height);
+  margin: var(--element-margin) 15px;
+}
+
+div.filters {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+span.filter {
+  margin: 0 7px;
+  cursor: pointer;
+  transition: all .1s;
+}
+
+span.filter.current {
+  
+}
+
+span.filter:hover {
+  color: rgb(89, 89, 89);
+}
+
+span.clear {
+  float: right;
+  line-height: var(--element-height);
+  margin: var(--element-margin) 15px;
+  cursor: pointer;
+  transition: all .1s;
+}
+
+span.clear:hover {
+  color: rgb(89, 89, 89);
+}

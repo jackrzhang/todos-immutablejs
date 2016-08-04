@@ -10,7 +10,7 @@ const DevTools = createDevTools(
     toggleVisibilityKey="ctrl-d"
     changePositionKey="ctrl-r"
     defaultPosition={'right'}
-    defaultIsVisible
+    defaultIsVisible={false}
     expandActionRoot
     expandStateRoot
   >
