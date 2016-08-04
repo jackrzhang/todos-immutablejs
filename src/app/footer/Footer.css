@@ -1,20 +1,20 @@
 div.footer {
-  --total-height: 40px;
-  --element-height: 22px;
-  --element-margin: 9px;
+  --footer-height: 40px;
+  --footer-element-height: 22px;
+  --footer-element-margin: 9px;
 }
 
 div.footer {
   position: relative;
-  height: var(--total-height);
+  height: var(--footer-height);
   color: rgb(130, 130, 130);
   font-size: 13px;
 }
 
 span.remaining {
   float: left;
-  line-height: var(--element-height);
-  margin: var(--element-margin) 15px;
+  line-height: var(--footer-element-height);
+  margin: var(--footer-element-margin) 15px;
 }
 
 div.filters {
@@ -43,8 +43,8 @@ span.filter:hover {
 
 span.clear {
   float: right;
-  line-height: var(--element-height);
-  margin: var(--element-margin) 15px;
+  line-height: var(--footer-element-height);
+  margin: var(--footer-element-margin) 15px;
   cursor: pointer;
   transition: all .1s;
 }

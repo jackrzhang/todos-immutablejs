@@ -9,16 +9,16 @@ const applyFilter = (todos, filter) => {
     case ALL:
       return todos;
     case ACTIVE:
-      return todos.filter(todo => !todo.complete);
+      return todos.filter(todo => !todo.get('complete'));
     case COMPLETED:
-      return todos.filter(todo => todo.complete);
+      return todos.filter(todo => todo.get('complete'));
     default:
       return todos;
   }
 };
 
 const mapStateToProps = state => ({
-  todos: applyFilter(state.todos, state.filter)
+  todos: applyFilter(state.get('todos'), state.get('filter'))
 });
 
 const mapDispatchToProps = dispatch => ({

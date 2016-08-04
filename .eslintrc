@@ -11,6 +11,7 @@
     "spread": true
   },
   "rules": {
+    "new-cap": 0, // Immutable.js constructors
     "no-confusing-arrow": 0,
     "no-console": 0,
     "comma-dangle": 0,

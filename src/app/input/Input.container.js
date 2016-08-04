@@ -4,7 +4,7 @@ import Input from './Input.view';
 import { addTodo } from './inputActions';
 
 const mapStateToProps = state => ({
-  canShowCaret: state.todos.length !== 0
+  canShowCaret: state.get('todos').size !== 0
 });
 
 const mapDispatchToProps = dispatch => ({

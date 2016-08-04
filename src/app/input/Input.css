@@ -1,18 +1,17 @@
-/* CSS variables */
-div.input {
-  --total-height: 56px;
-  --element-height: 55px;
+:root {
+  --input-height: 56px;
+  --input-element-height: 55px;
 }
 
 div.input {
   margin: 0;
-  height: var(--total-height);
+  height: var(--input-height);
   border-bottom: 1px solid rgb(230, 230, 230);
   box-shadow: inset 0px -5.5px 8px -8px rgba(204, 204, 204, 1);
 }
 
 span.caret {
-  line-height: var(--element-height);
+  line-height: var(--input-element-height);
   float: left;
   height: 40px;
   margin: 7px 0 5.5px 3px;
@@ -20,7 +19,7 @@ span.caret {
 }
 
 span.spacer {
-  height: var(--element-height);
+  height: var(--input-element-height);
   float: left;
   width: 43px;
   box-shadow: inset 0px -5.5px 8px -8px rgba(204, 204, 204, 1);
@@ -28,7 +27,7 @@ span.spacer {
 
 input.text {
   float: left;
-  height: var(--element-height);
+  height: var(--input-element-height);
   width: 400px;
   margin: 0 20px 0 10px;
   outline: none;

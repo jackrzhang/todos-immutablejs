@@ -45,10 +45,13 @@
     "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
+    "immutable": "^3.8.1",
     "normalize.css": "^4.2.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-immutable-proptypes": "^2.0.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-immutable": "^3.0.6"
   }
 }

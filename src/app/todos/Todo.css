@@ -1,16 +1,16 @@
-div.todo {
-  --total-height: 52px;
-  --element-height: 51px;
+:root {
+  --todo-height: 52px;
+  --todo-element-height: 51px;
 }
 
 div.todo {
   margin: 0;
-  height: var(--total-height);
+  height: var(--todo-height);
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 
 span.check {
-  line-height: var(--element-height);
+  line-height: var(--todo-element-height);
   float: left;
   height: 27px;
   width: 27px;
@@ -35,8 +35,8 @@ span.check:hover {
 }
 
 span.text {
-  height: var(--element-height);
-  line-height: var(--element-height);
+  height: var(--todo-element-height);
+  line-height: var(--todo-element-height);
   float: left;
   max-width: 85%;
   white-space: nowrap;

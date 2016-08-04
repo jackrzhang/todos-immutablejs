@@ -5,12 +5,13 @@ import { ALL, ACTIVE, COMPLETED } from './filterTypes';
 import Footer from './Footer.view';
 
 const mapStateToProps = state => ({
-  showFooter: state.todos.length !== 0,
-  canClearCompleted: state.todos.some(todo => todo.complete),
-  numIncomplete: state.todos.reduce((count, todo) => !todo.complete ? count + 1 : count, 0),
-  showAll: state.filter === ALL,
-  showActive: state.filter === ACTIVE,
-  showCompleted: state.filter === COMPLETED
+  showFooter: state.get('todos').size !== 0,
+  canClearCompleted: state.get('todos').some(todo => todo.get('complete')),
+  numIncomplete: state.get('todos')
+    .reduce((count, todo) => !todo.get('complete') ? count + 1 : count, 0),
+  showAll: state.get('filter') === ALL,
+  showActive: state.get('filter') === ACTIVE,
+  showCompleted: state.get('filter') === COMPLETED
 });
 
 const mapDispatchToProps = dispatch => ({

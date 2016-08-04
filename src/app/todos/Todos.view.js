@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import Todo from './Todo';
 
 class Todos extends Component {
@@ -8,10 +9,10 @@ class Todos extends Component {
       <div>
         {todos.map(todo => (
           <Todo
-            key={todo.id}
-            id={todo.id}
-            text={todo.text}
-            complete={todo.complete}
+            key={todo.get('id')}
+            id={todo.get('id')}
+            text={todo.get('text')}
+            complete={todo.get('complete')}
             completeTodo={completeTodo}
           />
         ))}
@@ -21,7 +22,7 @@ class Todos extends Component {
 }
 
 Todos.propTypes = {
-  todos: PropTypes.array.isRequired,
+  todos: ImmutablePropTypes.list.isRequired,
   completeTodo: PropTypes.func.isRequired
 };
 

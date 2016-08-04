@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux-immutable';
 import filterReducer from './footer/filterReducer';
 import todosReducer from './todos/todosReducer';
 
