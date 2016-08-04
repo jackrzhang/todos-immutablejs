@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styles from './Todo.css';
 
 class Todo extends Component {
   constructor(props) {
@@ -9,15 +10,16 @@ class Todo extends Component {
   completeTodo() { this.props.completeTodo(this.props.id); }
 
   render() {
-    const { text } = this.props;
+    const { text, complete } = this.props;
     return (
-      <div>
+      <div className={styles.todo}>
         <span
+          className={complete ? `${styles.check} ${styles.completed}` : styles.check}
           onClick={this.completeTodo}
+        />
+        <span
+          className={complete ? `${styles.text} ${styles.completed}` : styles.text}
         >
-          &#10003;
-        </span>
-        <span>
           {text}
         </span>
       </div>

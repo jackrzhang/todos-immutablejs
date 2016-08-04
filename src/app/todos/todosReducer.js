@@ -3,15 +3,17 @@ import { COMPLETE_TODO } from './../todos/todosActions';
 import { CLEAR_COMPLETED } from './../footer/footerActions';
 
 const initialTodos = [
+  {
+    id: 0,
+    text: 'Learn React & Redux',
+    complete: false
+  },
+  {
+    id: 1,
+    text: "Utilize Webpack's Hot Module Reloading",
+    complete: false
+  },
   // {
-  //   id: 0,
-  //   text: 'Learn React & Redux',
-  //   complete: false
-  // }, {
-  //   id: 1,
-  //   text: "Utilize Webpack's Hot Module Reloading",
-  //   complete: false
-  // }, {
   //   id: 2,
   //   text: 'Set up Redux DevTools',
   //   complete: false

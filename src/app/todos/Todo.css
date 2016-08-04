@@ -1,0 +1,67 @@
+div.todo {
+  --total-height: 52px;
+  --element-height: 51px;
+}
+
+div.todo {
+  margin: 0;
+  height: var(--total-height);
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+span.check {
+  line-height: var(--element-height);
+  float: left;
+  height: 27px;
+  width: 27px;
+  padding: 10px;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 50%;
+  margin: 12px 6px 12px 12px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+span.check.completed {
+  border-color: rgb(220, 220, 220);
+  padding: 4px;
+  content: inline('./../../assets/check-gray.png');
+}
+
+span.check:hover {
+  border-color: rgb(205, 205, 205);
+  padding: 4px;
+  content: inline('./../../assets/check-green.png');
+}
+
+span.text {
+  height: var(--element-height);
+  line-height: var(--element-height);
+  float: left;
+  max-width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 20px 0 10px;
+  outline: none;
+  border: none;
+  text-align: left;
+  font-size: 19px;
+  transition: all 0.2s;
+}
+
+span.text.completed {
+  position: relative;
+  color: rgb(220, 220, 220);
+}
+
+span.text.completed::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgb(220, 220, 220);
+}
