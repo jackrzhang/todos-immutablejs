@@ -19,7 +19,7 @@ const initialTodos = List([
     complete: false
   }), Map({
     id: 3,
-    text: 'Optimize with Immutable.js :)',
+    text: 'Optimize using immutability :)',
     complete: false
   })
 ]);

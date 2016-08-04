@@ -1,7 +1,14 @@
 import React, { PropTypes, Component } from 'react';
+import { shouldComponentUpdate as shouldPureComponentUpdate } from 'react-addons-pure-render-mixin';
+
 import styles from './Footer.css';
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.shouldComponentUpdate = shouldPureComponentUpdate.bind(this);
+  }
+
   render() {
     const {
       showFooter,

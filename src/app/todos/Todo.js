@@ -1,9 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import { shouldComponentUpdate as shouldPureComponentUpdate } from 'react-addons-pure-render-mixin';
+
 import styles from './Todo.css';
 
 class Todo extends Component {
   constructor(props) {
     super(props);
+    this.shouldComponentUpdate = shouldPureComponentUpdate.bind(this);
     this.completeTodo = this.completeTodo.bind(this);
   }
 
