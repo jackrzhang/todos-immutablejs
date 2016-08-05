@@ -14,7 +14,7 @@
     "lint": "./node_modules/.bin/eslint webpack src || true",
     "test": "npm run test:actions; npm run test:reducers",
     "test:actions": "./node_modules/.bin/mocha --reporter spec .specsetup.js src/**/*Actions.spec.js",
-    "test:reducers": "./node_modules/.bin/mocha --reporter spec .specsetup.js src/**/*Reducers.spec.js"
+    "test:reducers": "./node_modules/.bin/mocha --reporter spec .specsetup.js src/**/*Reducer.spec.js"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

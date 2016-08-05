@@ -4,7 +4,7 @@ import { ADD_TODO } from './../app/input/inputActions';
 import { COMPLETE_TODO } from './../app/todos/todosActions';
 import { CLEAR_COMPLETED } from './../app/footer/footerActions';
 
-const initialTodos = List([
+export const initialTodos = List([
   Map({
     id: 0,
     text: 'Learn React & Redux',
