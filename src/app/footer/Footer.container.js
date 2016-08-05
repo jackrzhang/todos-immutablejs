@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { clearCompleted, applyFilter } from './footerActions';
-import { ALL, ACTIVE, COMPLETED } from './filterTypes';
+import { ALL, ACTIVE, COMPLETED } from './../../state/filterTypes';
 
 import Footer from './Footer.view';
 

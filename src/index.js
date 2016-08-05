@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/App';
-import DevTools from './app/DevTools';
+import DevTools from './DevTools';
 
 import { Provider } from 'react-redux';
-import configureStore from './app/configureStore';
+import configureStore from './configureStore';
 const store = configureStore();
 
 let Root;

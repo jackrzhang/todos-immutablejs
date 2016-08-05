@@ -1,4 +1,4 @@
-import { APPLY_FILTER } from './footerActions';
+import { APPLY_FILTER } from './../app/footer/footerActions';
 import { ALL } from './filterTypes';
 
 const initialFilter = ALL;

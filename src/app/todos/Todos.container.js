@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { completeTodo } from './todosActions';
 import Todos from './Todos.view';
 
-import { ALL, ACTIVE, COMPLETED } from './../footer/filterTypes';
+import { ALL, ACTIVE, COMPLETED } from './../../state/filterTypes';
 
 const applyFilter = (todos, filter) => {
   switch (filter) {

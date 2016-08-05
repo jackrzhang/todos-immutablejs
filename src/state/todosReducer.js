@@ -1,8 +1,8 @@
 import { Map, List } from 'immutable';
 
-import { ADD_TODO } from './../input/inputActions';
-import { COMPLETE_TODO } from './../todos/todosActions';
-import { CLEAR_COMPLETED } from './../footer/footerActions';
+import { ADD_TODO } from './../app/input/inputActions';
+import { COMPLETE_TODO } from './../app/todos/todosActions';
+import { CLEAR_COMPLETED } from './../app/footer/footerActions';
 
 const initialTodos = List([
   Map({

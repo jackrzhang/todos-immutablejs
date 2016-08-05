@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux-immutable';
-import filterReducer from './footer/filterReducer';
-import todosReducer from './todos/todosReducer';
+import filterReducer from './filterReducer';
+import todosReducer from './todosReducer';
 
 const rootReducer = combineReducers({
   filter: filterReducer,
