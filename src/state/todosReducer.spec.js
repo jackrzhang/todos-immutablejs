@@ -15,7 +15,7 @@ describe('Todos Reducer', () => {
     ).to.equal(initialTodos);
   });
 
-  it('should handle ADD_FRIEND', () => {
+  it('should handle ADD_TODO', () => {
     expect(Immutable.is(
       todosReducer(List([]), {
         type: ADD_TODO,
